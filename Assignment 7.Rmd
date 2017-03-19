@@ -1,0 +1,77 @@
+---
+title: "Assignment 7 - Working with XML and JSON in R"
+author: "Georgia Galanopoulos"
+date: "March 19, 2017"
+output: html_document
+---
+```{r}
+library(knitr)
+library(jsonlite)
+library(XML)
+```
+###**Assignment Goals:**
+
+1. **Pick Books**
+ + Pick three books on one subject
+ + At least one with more than one author
+ + Include Title, Author and 3 other characteristics
+2. **Create three separate files**
+ + One is JSON
+ + The other in XML
+ + and the third is HTML (using html table)
+ + Create them by hand for practice
+3. **Load the three files into R**
+ + Read them in separately
+ + Compare if they are identical
+
+
+The books chosen were Humor and Adventure books for a younger audience and are imported in from a csv file just to show what the result is meant to look like. The attributes added in addition to the book title and author(s) are the number of Pages, the year the book was Published, the ISBN number and the star rating out of 5 the book was given on Goodreads. For the three files, imported below (JSON, XML and HTML), they were created by hand and imported from GitHub urls.
+```{r}
+Books = read.csv("Books.csv")
+kable(Books)
+```
+
+
+###**JSON**
+In order to use the fromJSON() function, we first must load the "jsonlite" library (all libraries were loaded at the top of the page).
+```{r}
+# JSON
+jbooks = fromJSON("Books.json")
+jbooks
+```
+As seen above, the JSON file is already formatted very similarly to a R dataframe, so, so editing it to look like the original csv file is very simple. If anything, the column headers are already formatted to have a space between words, unlike the csv file (which substitutes spaces with periods).
+```{r}
+kable(jbooks)
+```
+
+
+###**XML**
+For XML, we load the "XML" library to use the xmlTreeParse() function. This will read the file directly from the url. This shows what the original XML file looks like. However, this format must be changed into a dataframe. The xmlToDataFrame() function does this direcly.
+```{r}
+# XML
+xbooks = xmlTreeParse("Books.xml")
+xbooks
+
+xbooks = xmlToDataFrame("Books.xml")
+xbooks
+```
+The only difference in the final formatting is that the column titles cannot have spaces and therefore an underscore is substituted in the spaces between words in column names.
+```{r}
+kable(xbooks)
+```
+
+
+###**HTML**
+```{r}
+# HTML
+hbooks = readHTMLTable("Books.html", header = T)
+hbooks
+```
+Similarly to the JSON file, the HTML file was simple to read into R. It, too, had already formatted the column names. 
+```{r}
+kable(hbooks)
+```
+
+
+###**Final Thoughts**
+In determining if the three files are identical, the answer would have to be no. However, the differences between files are so minute that just a bit of manipulation in R can change that decision. For example, as mentioned above, the column names differ between some of the formats. In addition, the JSON Goodreads Rating column aligns the numbers to the right, unlike in XML and HTML which align to the left. Such minor differences are not significant enough to deem one format better than another, however it does exclude them from being identical.
