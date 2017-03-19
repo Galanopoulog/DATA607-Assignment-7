@@ -1,0 +1,39 @@
+{"Humor and Adventure Books": [
+    {
+    "Title": "Good Omens",
+    "Author 1": "Neil Gaiman",
+    "Author 2": "Terry Pratchett",
+    "Pages": 430,
+    "Published": 2006,
+    "ISBN": "0060853980",
+    "Goodreads Rating": 4.25
+    },
+    {
+    "Title": "Thief of Time",
+    "Author 1": "Terry Pratchett",
+    "Author 2": " ",
+    "Pages": 378,
+    "Published": 2008,
+    "ISBN": "0061031321",
+    "Goodreads Rating": 4.24
+    },
+    {
+    "Title": "The Graveyard Book",
+    "Author 1": "Neil Gaiman" ,
+    "Author 2": " ",
+    "Pages": 312,
+    "Published": 2008,
+    "ISBN": "0060530928",
+    "Goodreads Rating": 4.11
+    },
+    {
+    "Title": "The Hitchhiker's Guide to the Galaxy",
+    "Author 1": "Douglas Adams",
+    "Author 2": " ",
+    "Pages": 193,
+    "Published": 1997,
+    "ISBN": "0345418913",
+    "Goodreads Rating": 4.2
+    }	
+]
+} 

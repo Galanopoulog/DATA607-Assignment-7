@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Humor_and_Adventure_Books>
+    <Book id = "1">
+        <Title>Good Omens</Title>
+        <Author_1>Neil Gaiman</Author_1>
+        <Author_2>Terry Pratchett</Author_2>
+        <Pages>430</Pages>
+        <Published>2006</Published>
+        <ISBN>0060853980</ISBN>
+        <Goodreads_Rating>4.25</Goodreads_Rating>
+    </Book>
+    <Book id = "2">
+        <Title>Thief of Time</Title>
+        <Author_1>Terry Pratchett</Author_1>
+        <Author_2 />
+        <Pages>378</Pages>
+        <Published>2008</Published>
+        <ISBN>0061031321</ISBN>
+        <Goodreads_Rating>4.24</Goodreads_Rating>
+    </Book>
+    <Book id = "3">
+        <Title>The Graveyard Book</Title>
+        <Author_1>Neil Gaiman</Author_1>
+        <Author_2 />
+        <Pages>312</Pages>
+        <Published>2008</Published>
+        <ISBN>0060530928</ISBN>
+        <Goodreads_Rating>4.11</Goodreads_Rating>
+    </Book>
+    <Book id = "4">
+        <Title>The Hitchhiker's Guide to the Galaxy</Title>
+        <Author_1>Douglas Adams</Author_1>
+        <Author_2 />
+        <Pages>193</Pages>
+        <Published>1997</Published>
+        <ISBN>0345418913</ISBN>
+        <Goodreads_Rating>4.2</Goodreads_Rating>
+    </Book>
+</Humor_and_Adventure_Books>
